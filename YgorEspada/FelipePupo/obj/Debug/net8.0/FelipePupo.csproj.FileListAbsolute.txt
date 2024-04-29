@@ -126,3 +126,4 @@ C:\_ws\_ygor\ProvaA2\YgorEspada\FelipePupo\obj\Debug\net8.0\refint\FelipePupo.dl
 C:\_ws\_ygor\ProvaA2\YgorEspada\FelipePupo\obj\Debug\net8.0\FelipePupo.pdb
 C:\_ws\_ygor\ProvaA2\YgorEspada\FelipePupo\obj\Debug\net8.0\FelipePupo.genruntimeconfig.cache
 C:\_ws\_ygor\ProvaA2\YgorEspada\FelipePupo\obj\Debug\net8.0\ref\FelipePupo.dll
+C:\_ws\_ygor\ProvaA2\YgorEspada\FelipePupo\obj\Debug\net8.0\FelipePupo.sourcelink.json
