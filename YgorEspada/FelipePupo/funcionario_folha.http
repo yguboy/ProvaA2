@@ -1,14 +1,12 @@
-@base_url = https://localhost:PORTA/api
-
 # FUNCIONÁRIO ######################################
 
 ### Criação de um novo funcionário
-POST http://localhost:5113/felipepupo/funcionario/cadastrar
+POST http://localhost:5113/localhost:5113/felipepupo/funcionario/cadastrar
 Content-Type: application/json
 
 {
-    "nome": "Seu nome",
-    "cpf" : "12345678912"
+    "nome": "Teste",
+    "cpf" : 12345678912
 }
 
 ### Obtenção de todos os funcionários
