@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FelipePupo.Migrations
 {
     [DbContext(typeof(AppDataContext))]
-    [Migration("20240430002117_Primeira")]
+    [Migration("20240430003423_Primeira")]
     partial class Primeira
     {
         /// <inheritdoc />

@@ -6,16 +6,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDataContext>();
 
-var app = builder.Build();
+var ygorespada_felipepupo = builder.Build();
 
 List<Funcionario> funcionarios = new List<Funcionario>();
 
 // List<Folha> folhas = new List<Folha>();
 
 //POST: http://localhost:5113/felipepupo/models/funcionario/cadastrar
-app.MapPost("/felipepupo/funcionario/cadastrar/", ([FromBody] Funcionario funcionario, [FromServices] AppDataContext context) =>
+ygorespada_felipepupo.MapPost("/felipepupo/funcionario/cadastrar/", ([FromBody] Funcionario funcionario, [FromServices] AppDataContext context) =>
 {
-    List<ValidationResult> erros = new List<ValidationResult>();
+    // List<ValidationResult> erros = new List<ValidationResult>();
     // if (!Validator.TryValidateObject(funcionario, new ValidationContext(funcionario), erros, true))
     // {
     //     return Results.BadRequest(erros);
@@ -26,7 +26,7 @@ app.MapPost("/felipepupo/funcionario/cadastrar/", ([FromBody] Funcionario funcio
 });
 
 //GET: http://localhost:5113/felipepupo/models/funcionario/listar
-app.MapGet("/FelipePupo/models/funcionario/listar", ([FromServices] AppDataContext context) =>
+ygorespada_felipepupo.MapGet("/felipepupo/funcionario/listar/", ([FromServices] AppDataContext context) =>
 {
     if (context.Funcionarios.Any())
     {
@@ -68,4 +68,4 @@ app.MapGet("/FelipePupo/models/funcionario/listar", ([FromServices] AppDataConte
 //     return Results.Ok(folha);
 // });
 
-app.Run();
+ygorespada_felipepupo.Run();
