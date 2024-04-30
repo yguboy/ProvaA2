@@ -35,37 +35,25 @@ ygorespada_felipepupo.MapGet("/felipepupo/funcionario/listar/", ([FromServices] 
     return Results.NotFound("Funcionario não encontrado!");
 });
 
-// //POST: http://localhost:5113/felipepupo/folha/cadastrar
-// app.MapPost("/FelipePupo/models/folha/cadastrar", ([FromBody] Folha folhas, [FromServices] AppDataContext context) =>
-// {
-//     List<ValidationResult> erros = new List<ValidationResult>();
-//     if (!Validator.TryValidateObject(folhas, new ValidationContext(folhas), erros, true))
-//     {
-//         return Results.BadRequest(erros);
-//     }
-//     return Results.BadRequest("Folha não encontrada");
-// });
+//POST: http://localhost:5113/felipepupo/folha/cadastrar
+ygorespada_felipepupo.MapPost("/FelipePupo/models/folha/cadastrar", ([FromBody] Folha folhas, [FromServices] AppDataContext context) =>
+{
+    List<ValidationResult> erros = new List<ValidationResult>();
+    if (!Validator.TryValidateObject(folhas, new ValidationContext(folhas), erros, true))
+    {
+        return Results.BadRequest(erros);
+    }
+    return Results.BadRequest("Folha não encontrada");
+});
 
-// //GET: http://localhost:5113/felipepupo/folha/listar
-// app.MapGet("/FelipePupo/models/folha/listar", ([FromServices] AppDataContext context) =>
-// {
-//     if (context.Funcionarios.Any())
-//     {
-//         return Results.Ok(context.Funcionarios.ToList());
-//     }
-//     return Results.NotFound("Folha não encontrado!");
-// });
-
-// //GET: http://localhost:5113/felipepupo/folha/buscar/{iddafolha}
-// app.MapGet("/FelipePupo/folha/buscar/{id}", ([FromRoute] string Id, [FromRoute] AppDataContext context) =>
-// {
-//     Folha? folha = context.Folhas.FirstOrDefault(x => x.Id == id);
-
-//     if (folha is null)
-//     {
-//         return Results.NotFound("Folha não encontrado!");
-//     }
-//     return Results.Ok(folha);
-// });
+//GET: http://localhost:5113/felipepupo/folha/listar
+ygorespada_felipepupo.MapGet("/FelipePupo/models/folha/listar", ([FromServices] AppDataContext context) =>
+{
+    if (context.Funcionarios.Any())
+    {
+        return Results.Ok(context.Funcionarios.ToList());
+    }
+    return Results.NotFound("Folha não encontrado!");
+});
 
 ygorespada_felipepupo.Run();
